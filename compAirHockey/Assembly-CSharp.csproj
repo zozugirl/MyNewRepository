@@ -51,6 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\scripts\ballController.cs" />
+     <Compile Include="Assets\scripts\moveCubes_lvl3.cs" />
      <Compile Include="Assets\scripts\playerControler.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>E:/adv dip 2/unity game development/assingment/compAirHockey/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
