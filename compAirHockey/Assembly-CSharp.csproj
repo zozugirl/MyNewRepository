@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\scripts\ballController.cs" />
      <Compile Include="Assets\scripts\boxController_lvl3.cs" />
+     <Compile Include="Assets\scripts\menuController.cs" />
      <Compile Include="Assets\scripts\playerControler.cs" />
      <Compile Include="Assets\scripts\ScoreController.cs" />
  <Reference Include="Facebook.Unity.Settings">
