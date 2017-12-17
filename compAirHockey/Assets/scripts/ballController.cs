@@ -22,28 +22,39 @@ public class ballController : MonoBehaviour {
 	void Update () {
 		//player1 loses player 2 wins
 		if(transform.position.x < -10f){
+			//to take the ball to the middle again after it goes out and a player wins
+			transform.position = new Vector3(423f, 168f, -2f);
+			//To stop the ball
+			rb.velocity= Vector3.zero;
+			//give player2 a point
+			ScoreController.instance.GivePlayer2APoint();
 			StartCoroutine (Pause ());
 
 		}
 
 		//player 2 loses player1 wins
 		if(transform.position.x > 866f){
+			//to take the ball to the middle again after it goes out and a player wins
+			transform.position = new Vector3(423f, 168f, -2f);
+			//To stop the ball
+			rb.velocity= Vector3.zero;
+
+			//give player1 a point
+			ScoreController.instance.GivePlayer1APoint();
 			StartCoroutine (Pause ());
 
 		}
 	}
 	//to pause the ball for a little bit before it starts
 	IEnumerator Pause(){
-
+		
 		yield return new WaitForSeconds (1.5f);
+
 		LaunchBall ();
 	}
 
 	void LaunchBall(){
-		//to take the ball to the middle again after it goes out and a player wins
-
-		transform.position = new Vector3(423f, 168f, -2f);
-
+		
 		//Direction  ball 2 to go
 		//to make it be able to go right, left, right-up, left-up,right-down,left-down.
 		//it cant go up and down only because the ball will keep bouncing in the place
