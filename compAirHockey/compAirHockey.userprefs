@@ -1,17 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ballController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\game control\ScoreController1.cs">
     <Files>
-      <File FileName="Assets\scripts\ballController.cs" Line="27" Column="22" />
-      <File FileName="Assets\scripts\ScoreController.cs" Line="33" Column="34" />
+      <File FileName="Assets\scripts\game control\ScoreController2.cs" Line="41" Column="24" />
+      <File FileName="Assets\scripts\game control\ScoreController.cs" Line="42" Column="24" />
+      <File FileName="Assets\scripts\game control\ScoreController1.cs" Line="41" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <RunToCursorBreakpoint file="E:\adv dip 2\unity game development\assingment\compAirHockey\Assets\scripts\ballController.cs" line="29" column="31" />
-      <RunToCursorBreakpoint file="E:\adv dip 2\unity game development\assingment\compAirHockey\Assets\scripts\ballController.cs" line="32" column="35" />
-      <RunToCursorBreakpoint file="E:\adv dip 2\unity game development\assingment\compAirHockey\Assets\scripts\ballController.cs" line="48" column="3" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
