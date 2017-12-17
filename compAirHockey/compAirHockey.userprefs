@@ -1,20 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ballController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ScoreController.cs">
     <Files>
-      <File FileName="Assets\scripts\ballController.cs" Line="4" Column="1" />
-      <File FileName="Assets\scripts\moveCubes_lvl3.cs" Line="8" Column="17" />
+      <File FileName="Assets\scripts\ballController.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\playerControler.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\boxController_lvl3.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ScoreController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <RunToCursorBreakpoint file="E:\adv dip 2\unity game development\assingment\compAirHockey\Assets\scripts\ballController.cs" line="8" column="2" />
-      <RunToCursorBreakpoint file="E:\adv dip 2\unity game development\assingment\compAirHockey\Assets\scripts\ballController.cs" line="53" column="3" />
-      <RunToCursorBreakpoint file="E:\adv dip 2\unity game development\assingment\compAirHockey\Assets\scripts\ballController.cs" line="9" column="19" />
-      <RunToCursorBreakpoint file="E:\adv dip 2\unity game development\assingment\compAirHockey\Assets\scripts\ballController.cs" line="4" column="1" />
-      <RunToCursorBreakpoint file="E:\adv dip 2\unity game development\assingment\compAirHockey\Assets\scripts\playerControler.cs" line="10" column="3" />
-      <RunToCursorBreakpoint file="E:\adv dip 2\unity game development\assingment\compAirHockey\Assets\scripts\moveCubes_lvl3.cs" line="8" column="17" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

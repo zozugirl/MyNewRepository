@@ -6,32 +6,31 @@ public class ballController : MonoBehaviour {
 	Rigidbody rb;
 	// Use this for initialization
 
-	Vector3 startPos;
 
 	void Start () {
 		//shortcut to rigitbodu gameobject
 		rb = GetComponent<Rigidbody> ();
-		startPos=transform.position;
+
 		//pause the ball for a little while before it starts to delay the ball from starting moving
 		StartCoroutine (Pause ());
 
 
 
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		//player1 loses player 2 wins
 		if(transform.position.x < -10f){
-		StartCoroutine (Pause ());
+			StartCoroutine (Pause ());
 
 		}
-		//player 2 loses player1 wins
 
+		//player 2 loses player1 wins
 		if(transform.position.x > 866f){
 			StartCoroutine (Pause ());
-		
-			}
+
+		}
 	}
 	//to pause the ball for a little bit before it starts
 	IEnumerator Pause(){
@@ -41,9 +40,13 @@ public class ballController : MonoBehaviour {
 	}
 
 	void LaunchBall(){
-		transform.position = startPos;
-		//Direction  ball 2 to go
+		//to take the ball to the middle again after it goes out and a player wins
 
+		transform.position = new Vector3(423f, 168f, -2f);
+
+		//Direction  ball 2 to go
+		//to make it be able to go right, left, right-up, left-up,right-down,left-down.
+		//it cant go up and down only because the ball will keep bouncing in the place
 		//left or right
 		int xDirection = Random.Range(0,2);
 		//up or down
@@ -72,9 +75,11 @@ public class ballController : MonoBehaviour {
 
 		//to make the ball move to the direction the random.range choose
 		rb.velocity = BallDirection; 
-	
-	
+
+
 	}
+
+
 
 	void OnCollisionEnter (Collision hit){
 		//if ball hits wall it will go the other way not goes back 
@@ -104,6 +109,7 @@ public class ballController : MonoBehaviour {
 			}
 			rb.velocity =new Vector3(XDirectionSpeed, 250f,0f);
 		}
+
 		//players
 		if (hit.gameObject.name == "player1") {
 			//default hit will be left
@@ -112,7 +118,7 @@ public class ballController : MonoBehaviour {
 
 			//to see if we hit lower part so it moves down
 			if (transform.position.y - hit.gameObject.transform.position.y < -20) {
-				
+
 				rb.velocity = new Vector3 (250f, -250f, 0f);
 			}
 
@@ -145,7 +151,7 @@ public class ballController : MonoBehaviour {
 
 		}
 
-		}
-		
-
 	}
+
+
+}
