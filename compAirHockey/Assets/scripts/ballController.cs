@@ -5,8 +5,45 @@ using UnityEngine;
 public class ballController : MonoBehaviour {
 	Rigidbody rb;
 	// Use this for initialization
+
+	Vector3 startPos;
+
 	void Start () {
+		//shortcut to rigitbodu gameobject
 		rb = GetComponent<Rigidbody> ();
+		startPos=transform.position;
+		//pause the ball for a little while before it starts to delay the ball from starting moving
+		StartCoroutine (Pause ());
+
+
+
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		//player1 loses player 2 wins
+		if(transform.position.x < -10f){
+		StartCoroutine (Pause ());
+
+		}
+		//player 2 loses player1 wins
+
+		if(transform.position.x > 866f){
+			StartCoroutine (Pause ());
+		
+			}
+	}
+	//to pause the ball for a little bit before it starts
+	IEnumerator Pause(){
+
+		yield return new WaitForSeconds (1.5f);
+		LaunchBall ();
+	}
+
+	void LaunchBall(){
+		transform.position = startPos;
+		//Direction  ball 2 to go
+
 		//left or right
 		int xDirection = Random.Range(0,2);
 		//up or down
@@ -33,14 +70,12 @@ public class ballController : MonoBehaviour {
 		}
 
 
-//to make the ball move to the direction the random.range choose
+		//to make the ball move to the direction the random.range choose
 		rb.velocity = BallDirection; 
-	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+	
 	}
+
 	void OnCollisionEnter (Collision hit){
 		//if ball hits wall it will go the other way not goes back 
 		if(hit.gameObject.name =="top_wall"){
